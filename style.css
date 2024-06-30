@@ -16,6 +16,7 @@ html {
 
 body {
   font-family: var(--system-ui);
+  font-size: 1rem;
 }
 
 .text-muted {
@@ -32,6 +33,7 @@ body {
   height: 2.5rem;
   border-radius: 50%;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .btn-icon:hover {
@@ -143,13 +145,30 @@ body {
   border: none;
   border-radius: 2rem;
   padding: 0.5rem 1rem;
+  outline: none;
+}
+
+.search-bar > input:focus {
+  box-shadow: 0 0 5px 0 var(--dark);
 }
 
 .notification-bar,
-.profile-info {
+.profile-info,
+.profile {
   display: flex;
   gap: 2rem;
   align-items: center;
+}
+
+.profile {
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.profile:hover {
+  cursor: pointer;
+  background-color: var(--grey);
 }
 
 .header-btns {
@@ -182,7 +201,7 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   margin: 1rem 0;
 }
@@ -206,23 +225,48 @@ body {
 }
 
 .side-content h2:last-of-type {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .announcements-card,
 .trending-card {
   background-color: var(--light);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   display: grid;
-  gap: 1rem;
   line-height: 1.2;
   margin-top: 1rem;
   box-shadow: 1px 1px 5px 0 rgb(150, 150, 150);
 }
 
+.announcements-card > div {
+  padding: 1rem;
+}
+
+.announcements-card > div:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.announcements-card > div:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
 .trending-card > div {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.trending-card > div:hover,
+.announcements-card > div:hover {
+  cursor: pointer;
+  background-color: var(--grey);
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
 }
