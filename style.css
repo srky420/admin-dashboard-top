@@ -6,7 +6,7 @@
   --primary-hover: #0369a1;
   --muted: rgb(100, 100, 100);
 
-  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+  --system-ui: "Roboto", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
